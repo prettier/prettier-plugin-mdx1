@@ -1,18 +1,18 @@
 {
-  "name": "@prettier/plugin-mdx2",
-  "description": "Prettier MDX2 plugin",
+  "name": "@prettier/plugin-mdx1",
+  "description": "Prettier MDX1 plugin",
   "version": "0.0.0",
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "files": [
     "lib"
   ],
-  "homepage": "https://github.com/prettier/prettier-plugin-mdx2#readme",
+  "homepage": "https://github.com/prettier/prettier-plugin-mdx1#readme",
   "bugs": {
     "url": "https://github.com/prettier/html-styles/issues"
   },
-  "repository": "prettier/prettier-plugin-mdx2",
-  "funding": "https://github.com/prettier/prettier-plugin-mdx2?sponsor=1",
+  "repository": "prettier/prettier-plugin-mdx1",
+  "funding": "https://github.com/prettier/prettier-plugin-mdx1?sponsor=1",
   "type": "module",
   "exports": "./lib/index.js",
   "scripts": {
