@@ -259,9 +259,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@prettier/plugin-mdx2@workspace:.":
+"@prettier/plugin-mdx1@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@prettier/plugin-mdx2@workspace:."
+  resolution: "@prettier/plugin-mdx1@workspace:."
   dependencies:
     "@babel/code-frame": "npm:7.27.1"
     cjk-regex: "npm:3.4.0"
