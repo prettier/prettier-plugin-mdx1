@@ -1,18 +1,37 @@
 {
   "name": "@prettier/plugin-mdx2",
   "version": "0.0.0",
-  "main": "index.js",
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
-  "devDependencies": {
-    "prettier": "^3.7.4",
-    "vitest": "^4.0.16"
-  },
   "files": [
     "lib"
   ],
-  "exports": "./lib/index.js",
+  "type": "module",
+  "exports": {
+    "require": "./dist/index.js",
+    "default": "./dist/index.mjs"
+  },
+  "scripts": {
+    "test": "vitest",
+    "fix": "prettier . --write"
+  },
   "preferUnplugged": true,
   "packageManager": "yarn@4.12.0",
-  "sideEffects": false
+  "sideEffects": false,
+  "dependencies": {
+    "cjk-regex": "3.4.0",
+    "collapse-white-space": "1.0.6",
+    "escape-string-regexp": "5.0.0",
+    "remark-footnotes": "2.0.0",
+    "remark-math": "3.0.1",
+    "remark-parse": "8.0.3",
+    "unified": "9.2.2"
+  },
+  "devDependencies": {
+    "@babel/code-frame": "7.27.1",
+    "index-to-position": "1.2.0",
+    "jest-snapshot-serializer-raw": "2.0.0",
+    "prettier": "^3.7.4",
+    "vitest": "^4.0.16"
+  }
 }

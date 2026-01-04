@@ -1,25 +1,21 @@
-import     {     Baz } from     './Fixture'
-import { Buz  }   from './Fixture'
+import { Baz } from "./Fixture";
+import { Buz } from "./Fixture";
 
-export  const   foo    = {
-  hi:     `Fudge ${Baz.displayName || 'Baz'}`,
-  authors: [
-     'fred',
-           'sally'
-    ]
-}
+export const foo = {
+  hi: `Fudge ${Baz.displayName || "Baz"}`,
+  authors: ["fred", "sally"],
+};
 
-# Hello,    world!
+# Hello, world!
 
-
- I'm an awesome   paragraph.
+I'm an awesome paragraph.
 
 <!-- I'm a comment -->
 
-<Foo bg='red'>
-      <Bar    >hi    </Bar>
-       {  hello       }
-       {     /* another comment */}
+<Foo bg="red">
+  <Bar>hi </Bar>
+  {hello}
+  {/* another comment */}
 </Foo>
 
 ```
@@ -27,15 +23,15 @@ test codeblock
 ```
 
 ```js
-module.exports = 'test'
+module.exports = "test";
 ```
 
 ```sh
 npm i -g foo
 ```
 
-| Test  | Table   |
-|    :---     | :----  |
-|   Col1  | Col2    |
+| Test | Table |
+| :--- | :---- |
+| Col1 | Col2  |
 
-export   default     ({children   }) => < div>{    children}</div>
+export default ({ children }) => <div>{children}</div>;
