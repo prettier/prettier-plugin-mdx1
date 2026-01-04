@@ -1,7 +1,7 @@
 # @prettier/plugin-mdx1
 
 [![Npm Version](https://img.shields.io/npm/v/@prettier/plugin-mdx1.svg?style=flat-square)](https://www.npmjs.com/package/@prettier/plugin-mdx1)
-[![MIT License](https://img.shields.io/npm/l/@prettier/plugin-mdx1.svg?style=flat-square)](https://github.com/prettier/prettier/blob/main/license)
+[![MIT License](https://img.shields.io/npm/l/@prettier/plugin-mdx1.svg?style=flat-square)](https://github.com/prettier/prettier-plugin-mdx1/blob/main/license)
 
 > Prettier plugin for MDX1.
 
