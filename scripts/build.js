@@ -24,7 +24,6 @@ function bundle(format) {
   const options = {
     entryPoints: [path.join(import.meta.dirname, "../lib/index.js")],
     bundle: true,
-    external: ["prettier"],
     tsconfigRaw: JSON.stringify({}),
     target: ["node14"],
     format,
