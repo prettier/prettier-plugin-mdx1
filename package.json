@@ -1,7 +1,7 @@
 {
   "name": "@prettier/plugin-mdx1",
   "description": "Prettier MDX1 plugin",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "author": "fisker <lionkay@gmail.com>",
   "license": "MIT",
   "files": [
