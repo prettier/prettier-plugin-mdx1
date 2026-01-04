@@ -2,10 +2,11 @@ import path from "node:path";
 import fs from "node:fs/promises";
 import url from "node:url";
 import esbuild from "esbuild";
-import esbuildPluginAddDefaultExport from "../../prettier/scripts/build/esbuild-plugins/add-default-export.js";
-import esbuildPluginReplaceModule from "../../prettier/scripts/build/esbuild-plugins/replace-module.js";
-import esbuildPluginUmd from "../../prettier/scripts/build/esbuild-plugins/umd.js";
+import esbuildPluginAddDefaultExport from "./esbuild-plugin-add-default-export.js";
+import esbuildPluginReplaceModule from "./esbuild-plugin-replace-module.js";
+import esbuildPluginUmd from "./esbuild-plugin-umd.js";
 import packageJson from "../package.json" with { type: "json" };
+import esbuildPluginEvaluate from "./esbuild-plugin-evaluate.js";
 
 const minify = !process.argv.includes("--no-minify");
 const moduleReplacements = [
@@ -33,6 +34,7 @@ function bundle(format) {
       `../dist/index.${format === "esm" ? "mjs" : "js"}`,
     ),
     plugins: [
+      esbuildPluginEvaluate(),
       esbuildPluginReplaceModule({ replacements: moduleReplacements }),
       format === "esm" ? esbuildPluginAddDefaultExport() : undefined,
       format === "umd"
@@ -40,6 +42,16 @@ function bundle(format) {
         : undefined,
     ].filter(Boolean),
     legalComments: "none",
+    supported: {
+      // https://github.com/evanw/esbuild/issues/3471
+      "regexp-unicode-property-escapes": true,
+      // Maybe because Node.js v14 doesn't support "spread parameters after optional chaining" https://node.green/
+      "optional-chain": true,
+      // Maybe because https://github.com/evanw/esbuild/pull/3167?
+      "class-field": true,
+      "class-private-field": true,
+      "class-private-method": true,
+    },
   };
 
   return esbuild.build(options);
